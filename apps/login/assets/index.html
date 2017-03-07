@@ -1,0 +1,68 @@
+<!--    <div id="loginBodyModel">
+      <a class="hiddenanchor" id="signup"></a>
+      <a class="hiddenanchor" id="signin"></a>
+
+      <div class="login_wrapper">
+        <div class="animate form login_form">
+          <section class="login_content" id="login" data-bind="with: login">
+					<form method="POST" accept-charset="UTF-8" data-bind="submit: submit">
+						<input type="hidden" name="password" id="password" data-bind="value: password"/>
+              <h1>Login Form</h1>
+              <div>
+                <input type="text" class="form-control" placeholder="Username" required="" id="username"/>
+              </div>
+              <div>
+                <input type="password" class="form-control" placeholder="Password" required="" name="clearpassword" id="clearpassword"/>
+              </div>
+              <div>
+								<button type="submit" class="btn btn-primary">Log in</button>
+              </div>
+            </form>
+          </section>
+        </div>
+-->
+<!--
+http://bootsnipp.com/snippets/featured/google-style-login-extended-with-html5-localstorage
+-->
+
+<!--
+    you can substitue the span of reauth email for a input with the email and
+    include the remember me checkbox
+    -->
+    <div class="container" id="loginBodyModel">
+        <div class="card card-container" data-bind="with: login">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+						<form class="form-signin" method="POST" accept-charset="UTF-8" data-bind="submit: submit">
+							<input type="hidden" name="password" id="password" data-bind="value: password"/>
+<!--
+                <span id="reauth-email" class="reauth-email"></span>
+-->
+                <input type="text" class="form-control" placeholder="Username" id="username" required autofocus/>
+<!--
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+-->
+								<input type="password" class="form-control" placeholder="Password" name="clearpassword" id="clearpassword" required/>
+<!--
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+-->
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me" > Remember me
+                    </label>
+                    <!--
+                    <label class="custom-control custom-checkbox">
+											<input type="checkbox" class="custom-control-input">
+											<span class="custom-control-indicator"></span>
+											<span class="custom-control-description">Remember me</span>
+										</label>
+										-->
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            </form><!-- /form -->
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->

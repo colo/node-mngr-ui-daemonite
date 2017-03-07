@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  {{> page/head}}
+  </head>
+	
+	{{#if body_class}}
+  <body id="main-body" class="{{{body_class}}}">
+	{{else}}
+	<body id="main-body">
+	{{/if}}
+	
+	{{{body}}}
+	
+	<script>
+	{{#each body_script}}
+		{{{this}}}
+	{{/each}}
+	</script>
+	
+	{{#each body_scripts}}
+	<script src="{{{this}}}"></script>
+	{{/each}}
+	
+	{{#each body_css}}
+  <link href="{{{this}}}" rel="stylesheet">
+	{{/each}}
+
+	
+	<style>
+	{{{body_style}}}
+	</style>
+	
+	
+  </body>
+</html>
